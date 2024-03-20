@@ -124,7 +124,7 @@ let countdownInterval: NodeJS.Timeout | null = null;
 document.getElementById('loginButton')!.addEventListener('click', () => {
     const usernameInput = document.getElementById('username') as HTMLInputElement;
     const username = usernameInput.value.trim();
-    
+
     // Kiểm tra xem trường nhập tên người dùng có trống không
     if (!username) {
         alert('Tên người dùng không được để trống.');
@@ -293,3 +293,80 @@ function stopCountdown() {
     }
 }
 
+// Bài 5
+// 1.Arrow function
+// TypeScript
+const double = (num: number): number => num * 2;
+// JS
+function double2(num = 0) {
+    return num * num;
+}
+
+
+// 2.Regular function
+// TypeScript
+function doubleRegular(num: number): number {
+    return num * 2;
+}
+// JS
+
+
+// 3.Function return
+// TypeScript và JavaScript đều không có sự khác biệt đáng kể ở đây.
+function sum1(a: number, b: number): number {
+    return a + b;
+}
+function reverseString(str: string): string {
+    return str.split('').reverse().join('');
+}
+
+
+// 4.Function as types
+type MathFunction = (x: number, y: number) => number;
+const add: MathFunction = (x, y) => x + y;
+
+
+// 5.Function with parameters
+// TypeScript và JavaScript đều không có sự khác biệt đáng kể ở đây.
+function sumArray(numbers: number[]): number {
+    return numbers.reduce((acc, curr) => acc + curr, 0);
+}
+function sumUnknownArgs(...args: number[]): number {
+    return args.reduce((acc, curr) => acc + curr, 0);
+}
+
+
+// 6.Default parameter
+// TypeScript
+function square(num: number = 0): number {
+    return num * num;
+}
+// JS
+function square3(num = 0) {
+    return num * num;
+}
+
+function sumWithDefault(a: number, b: number = 0): number {
+    return a + b;
+}
+
+
+// 7.Optional parameter
+// TypeScript có thể định nghĩa tham số tùy chọn, trong khi JavaScript không hỗ trợ trực tiếp cú pháp cho điều này.
+function optionalValue(value?: number): number {
+    return value || 0;
+}
+
+
+// 8.Spread operators
+// TypeScript và JavaScript đều sử dụng toán tử spread giống nhau.
+function sumSpread(...nums: number[]): number {
+    return nums.reduce((acc, curr) => acc + curr, 0);
+}
+
+
+// 9.Rest parameter
+// TypeScript và JavaScript đều sử dụng cú pháp rest parameter giống nhau.
+function sumRest(...nums: number[]): number {
+    return nums.reduce((acc, curr) => acc + curr, 0);
+}
