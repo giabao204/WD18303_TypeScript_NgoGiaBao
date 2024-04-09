@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+.color-change:hover {
+    cursor: pointer;
+}
+#playerForm {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.img-thumbnail {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    height: 20%;
+}
+.img-container {
+    margin-bottom: 20px;
+}
+.img-thumbnail:hover {
+    transform: scale(1.05);
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+.col-sm-3 {
+    flex: 0 0 12.5%;
+    max-width: 12.5%;
+    padding: 0 10px;
+    margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+    .col-sm-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+.incorrect img {
+    border-color: red;
+}
+.hidden {
+    visibility: hidden;
+}
